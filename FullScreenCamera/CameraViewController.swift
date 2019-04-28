@@ -34,11 +34,9 @@ class CameraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        
         
         previewView.session = captureSession
-        
-        
         /*
          Setup the capture session.
          In general, it is not safe to mutate an AVCaptureSession or any of its
@@ -53,6 +51,8 @@ class CameraViewController: UIViewController {
             self.setupSession()
             self.startSession()
         }
+        
+        setupUI()
     }
     
     func setupUI() {
@@ -115,10 +115,6 @@ class CameraViewController: UIViewController {
                     print("errror occured while creagting device input: \(error.localizedDescription)")
                 }
             }
-            
-            
-            
-            
         }
     }
     
